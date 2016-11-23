@@ -4,10 +4,10 @@ package jp.ac.uryukyu.ie.e165745;
  * Created by e165745 on 2016/11/21.
  */
 public class LivingThing {
-    String name;
-    int hitPoint;
-    int attack;
-    boolean dead;
+    private String name;
+    private int hitPoint;
+    private int attack;
+    private boolean dead;
 
     public LivingThing (String name, int maximumHP, int attack, boolean dead) {
         this.name = name;
@@ -32,7 +32,7 @@ public class LivingThing {
         }
         else{
             //何もしない
-            System.out.printf("テスト");
+
         }
     }
 

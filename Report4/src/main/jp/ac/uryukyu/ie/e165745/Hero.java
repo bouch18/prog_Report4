@@ -12,13 +12,9 @@ package jp.ac.uryukyu.ie.e165745;
     LivingThing hero = super.LivingThing("勇者", 10, 5);*/
 
 public class Hero extends LivingThing {
-    String name;
-    int hitPoint;
-    int attack;
-    boolean dead;
 
-    public Hero(String look, int take ,int manu, boolean lora){
-        super(look, take, manu, lora); // 必ず先頭で呼び出す
+    public Hero(String look, int take ,int manu){
+        super(look, take, manu); // 必ず先頭で呼び出す
 
 
     }

@@ -9,11 +9,11 @@ public class LivingThing {
     private int attack;
     private boolean dead;
 
-    public LivingThing (String name, int maximumHP, int attack, boolean dead) {
+    public LivingThing (String name, int maximumHP, int attack) {
         this.name = name;
         this.hitPoint = maximumHP;
         this.attack = attack;
-        this.dead = dead;
+        this.dead = false;
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
     }
     public boolean isDead() {
@@ -23,7 +23,7 @@ public class LivingThing {
         return name;
     }
     public int gethitPoint() { return hitPoint;}
-
+    public void setisDead() {this.dead = true;}
     public void attack(LivingThing opponent){
         if(dead == false){
             int damage = (int)(Math.random() * attack);
@@ -39,7 +39,7 @@ public class LivingThing {
     public void wounded(int damage){
         hitPoint -= damage;
         if( hitPoint <= 0 ){
-            dead = true;
+            this.dead = true;
             System.out.printf("%sは倒れた。\n", name);
         }
     }
